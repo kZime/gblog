@@ -19,7 +19,7 @@ env:
 jobs:
   sync:
     name: Generate README
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
