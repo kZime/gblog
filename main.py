@@ -6,8 +6,9 @@ import os
 
 from github import Github
 
-MD_HEAD = """## Gitblog
+MD_HEAD = """## GitBlog
 My personal blog using issues and GitHub Actions
+(fork from [yihong0618/gitblog](https://github.com/yihong0618/gitblog)
 """
 
 BACKUP_DIR = "BACKUP"
@@ -102,7 +103,7 @@ def add_md_recent(repo, md, me):
     with open(md, "a+", encoding="utf-8") as md:
         # one the issue that only one issue and delete (pyGitHub raise an exception)
         try:
-            md.write("## 最近更新\n")
+            md.write("## Recent\n")
             for issue in new_five_issues:
                 if isMe(issue, me):
                     add_issue_info(issue, md)
