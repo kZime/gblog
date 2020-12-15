@@ -57,9 +57,6 @@ jobs:
           # commit-message: "Refresh README AND BACK UP"
         commit-message: format('update \#{0} {1}', '${{ github.event.issue.number }}', '${{ github.event.issue.title }}')
 
-
- 
-
           files: README.md BACKUP/
           rebase: 'true'
           name: ${{ env.GITHUB_NAME }}
