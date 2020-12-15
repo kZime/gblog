@@ -55,7 +55,7 @@ jobs:
         with:
           github-token: ${{ secrets.G_T }}
           # commit-message: "Refresh README AND BACK UP"
-          commit-message: format('update {0} {1}, {2}', ${{ github.event.issue.number }}, ${{ github.event.issue.name }}, ${{ github.event_name}})
+        commit-message: update \#${{ github.event.issue.number }}, ${{ github.event.issue.title }}
  
 
           files: README.md BACKUP/
